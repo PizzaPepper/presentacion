@@ -17,14 +17,17 @@ import java.awt.RenderingHints;
 import javax.swing.JPanel;
 
 /**
- *
- * @author Jorge Eliu
+ * Clase que se encarga de dibujar el resultado de las canias 
+ * @author Equipo 5
  */
 public class LienzoCanias extends JPanel implements IFigura{
     
     private boolean[] canias = null;
     private Graphics2D g2d;
-    
+    /**
+     * Metodo que dibuja el Jpanel
+     * @param g Objeto Grapgics para dibujar el Jpanel
+     */
     @Override
     protected void paintComponent(Graphics g) {
         super.paintComponent(g); //To change body of generated methods, choose Tools | Templates.
@@ -48,24 +51,37 @@ public class LienzoCanias extends JPanel implements IFigura{
     }
     
     
-    
+    /**
+     * Metodo que regresa las Canias
+     * @return regresa las Canias
+     */
     public boolean[] getCanias() {
         return canias;
     }
-
+    /**
+     * Metodo que establece Canias
+     * @param canias Canias a establecer
+     */
     public void setCanias(boolean[] canias) {
         this.canias = canias;
     }
-
+    /**
+     * Metodo que regresa el Graphics
+     * @return regresa el objeto Graphics
+     */
     public Graphics2D getG2d() {
         return g2d;
     }
-
+    /**
+     * Metodo que establece Canias
+     * @param canias Canias a establecer
+     */
     public void setG2d(Graphics2D g2d) {
         this.g2d = g2d;
     }
-    
-    /* Metodo para lanzar canias */
+    /**
+     * Metodo que repinta el resultado del las canias
+     */
     public void LanzarCanias() {
         if (canias != null) {
             int x = 0, y = 0;
@@ -74,7 +90,9 @@ public class LienzoCanias extends JPanel implements IFigura{
         }
     }
 
-    /* Metodo que complementa lanzar canias */
+    /*  
+    * Metodo que complementa lanzar canias
+    */
     public void LanzarCanias(boolean[] canias) {
         if (canias != null) {
             int x = 50, y = 20;
@@ -83,7 +101,12 @@ public class LienzoCanias extends JPanel implements IFigura{
         }
     }
 
-
+    /**
+     * Metodo interfaz que dibuja las canias
+     * @param x Posicion x
+     * @param y Posicion y
+     * @param g2d Objeto Graphics2D donde se va dibujar
+     */
     @Override
     public void dibujar(int x, int y, Graphics2D g2d) {
        int ancho=20,alto=20;
