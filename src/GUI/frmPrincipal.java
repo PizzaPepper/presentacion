@@ -3,7 +3,7 @@ package GUI;
 import javax.swing.JOptionPane;
 
 /**
- *
+ * Pantalla principal del juego 
  * @author Equipo 5
  */
 public class frmPrincipal extends javax.swing.JFrame {
@@ -69,6 +69,7 @@ public class frmPrincipal extends javax.swing.JFrame {
         this.setVisible(false);
     }//GEN-LAST:event_btnJugarActionPerformed
 
+    /*Metodo que llama con un botón a la pantalla "Ayuda" que explica las reglas del juego */
     private void btnAyudaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnAyudaActionPerformed
         String msg="Patolli es uno de los juegos más antiguos de América prehispánica.\n "
                 + "Lo jugaban los teotihuacanos , toltecas , los mayas y los aztecas.\n"
