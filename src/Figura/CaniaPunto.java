@@ -11,7 +11,7 @@ import java.awt.Rectangle;
 import java.awt.geom.Ellipse2D;
 
 /**
- *Clase de una cania pubto
+ *Clase de una cania punto
  * @author Equipo5
  */
 public class CaniaPunto implements IFigura{
