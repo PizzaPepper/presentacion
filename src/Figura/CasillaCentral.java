@@ -10,7 +10,7 @@ import java.awt.Graphics2D;
 import java.awt.Rectangle;
 
 /**
- *
+ *Clase de una casilla tipo central
  * @author Equipo 5
  */
 public class CasillaCentral extends CasillaDibujo {
