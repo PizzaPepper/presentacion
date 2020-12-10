@@ -23,7 +23,7 @@ public class Bastidor extends javax.swing.JFrame {
     private LienzoCanias lienzoCanias;
     private JLayeredPane capas;
      
-
+//Constructor que recibe en su parametro el tamaño que indicó el jugador en la configuración previa
     public Bastidor(int tamanio) {
         initComponents();
         this.tablero = new Tablero(tamanio);
