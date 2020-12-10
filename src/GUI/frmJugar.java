@@ -82,16 +82,19 @@ public class frmJugar extends javax.swing.JFrame {
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
+    //Metodo que le da función al boton para poder mandarlo a la pantalla principal
     private void btnPrincipalActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnPrincipalActionPerformed
         new frmPrincipal().setVisible(true);
         this.setVisible(false);
     }//GEN-LAST:event_btnPrincipalActionPerformed
-
+    
+    //metodo que le da función al boton para crear y configurar una partida 
     private void btnCrearPartidaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnCrearPartidaActionPerformed
         new frmConfiguracion().setVisible(true);
         this.setVisible(false);
     }//GEN-LAST:event_btnCrearPartidaActionPerformed
 
+    //Metodo que le da función al boton para unirse a una partida ya creada previamente.
     private void btnUnirsePartidaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnUnirsePartidaActionPerformed
         new frmJugar().setVisible(true);
         this.setVisible(false);
