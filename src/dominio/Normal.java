@@ -1,7 +1,7 @@
 package dominio;
 
 /**
- *
+ * clase que representa una casilla normal en el tablero
  * @author Equipo 5
  */
 public class Normal extends Casilla {
