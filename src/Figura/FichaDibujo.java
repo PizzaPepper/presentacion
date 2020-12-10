@@ -10,7 +10,7 @@ import java.awt.Color;
 import java.awt.Graphics2D;
 
 /**
- *
+ * Clase de una ficha dibujo
  * @author Equipo5
  */
 public class FichaDibujo implements IFigura{
@@ -147,8 +147,8 @@ public class FichaDibujo implements IFigura{
     
     /**
      * Metodo que dibuja la ficha
-     * @param x Posicion x de la casilla
-     * @param y Posicion y de la casilla
+     * @param x Posicion x de la ficha
+     * @param y Posicion y de la ficha
      * @param g2d Graphics2D del JPanel 
      */
     @Override
