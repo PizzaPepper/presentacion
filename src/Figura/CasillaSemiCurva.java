@@ -9,7 +9,7 @@ import java.awt.Color;
 import java.awt.Graphics2D;
 
 /**
- *
+ * Clase de una casilla tipo semicurva
  * @author Equipo 5
  */
 public class CasillaSemiCurva extends CasillaDibujo{
