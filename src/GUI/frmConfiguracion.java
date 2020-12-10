@@ -5,13 +5,14 @@
  */
 package GUI;
 
+//Librerias que se van a utilizar
 import dominio.Tablero;
 import java.awt.Dimension;
 import javax.swing.JOptionPane;
 
 /**
- *
- * @author Citlali Orduño
+ * Pantalla que se encarga de realizar la configuración del juego para la nueva partida
+ * @author equipo 5 
  */
 public class frmConfiguracion extends javax.swing.JFrame {
 
@@ -233,11 +234,13 @@ public class frmConfiguracion extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_txtApuestaActionPerformed
 
+    //metodo que le da funcion al boton de cancelar 
     private void btnCancelarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnCancelarActionPerformed
         new frmJugar().setVisible(true);
         this.setVisible(false);
     }//GEN-LAST:event_btnCancelarActionPerformed
 
+    //metodo que permite crear una nueva partida mandando al jugador a la pantalla de configuración
     private void btnCrearPartidaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnCrearPartidaActionPerformed
         String numCasilla = (String) cmbTablero.getSelectedItem();
         int casillas = Integer.parseInt(numCasilla);
