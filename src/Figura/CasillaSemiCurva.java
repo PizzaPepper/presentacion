@@ -16,6 +16,7 @@ public class CasillaSemiCurva extends CasillaDibujo{
 
     private int startAngle;
     private int grade;
+    
     /**
      * Contructor 
      * @param x Posicion x de la casilla
