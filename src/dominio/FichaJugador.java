@@ -5,7 +5,7 @@ import java.awt.Color;
 import java.awt.geom.Ellipse2D;
 
 /**
- *
+ * clase que representa la ficha del jugador
  * @author Equipo 5
  */
 public class FichaJugador {
@@ -18,7 +18,7 @@ public class FichaJugador {
     private Color color;
     private int pasos;
     
-    
+    //constructor que recibe el color de la ficha en su parametro
     public FichaJugador(Color color) {
         this.x = 0;
         this.y = 0;
@@ -39,6 +39,7 @@ public class FichaJugador {
         this.pasos=0;
     }
     
+    //Metodo vacio que recibe las medidas y posición de la ficha 
     public void nuevasDimensiones(int x, int y, int ancho, int alto){
         this.x = x;
         this.y = y;
