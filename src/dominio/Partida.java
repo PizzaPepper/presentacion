@@ -1,7 +1,7 @@
 package dominio;
 
 /**
- *
+ * clase que representa la partida del juego
  * @author Equipo 5
  */
 public class Partida {
