@@ -11,38 +11,58 @@ import java.awt.Color;
 import java.awt.Graphics2D;
 
 /**
- *
- * @author Jorge Eliu
+ * Clase del tablero dibujo 
+ * @author Equipo5
  */
 public class TableroDibujo implements IFigura {
 
     private CasillaDibujo[] casilladibujo;
     private Tablero tablero;
     private boolean sentido;
-
+    /**
+     * Constructor
+     * @param tablero que configura el tamaño del tablero 
+     */
     public TableroDibujo(Tablero tablero) {
         int total = ((tablero.getTamanio() + 1) * 8) - 4;
         this.casilladibujo = new CasillaDibujo[total];
         this.tablero = tablero;
         this.sentido = true;
     }
-
+     /**
+     * Metodo que Regresa el arreglo de casillas dibujo
+     * @return casilladibujo[]
+     */
     public CasillaDibujo[] getCasilladibujo() {
         return casilladibujo;
     }
-
+    /**
+     * Metodo que establece el arreglo de casillas dibujo
+     * @param casilladibujo[] Valor a cambiar
+     */
     public void setCasilladibujo(CasillaDibujo[] casilladibujo) {
         this.casilladibujo = casilladibujo;
     }
-
+    /**
+     * Metodo que Regresa el tablero dominio
+     * @return casilladibujo[]
+     */
     public Tablero getTablero() {
         return tablero;
     }
-
+    /**
+     * Metodo que establece el tablero
+     * @param tablero Valor a cambiar
+     */
     public void setTablero(Tablero tablero) {
         this.tablero = tablero;
     }
-
+    /**
+     * Metodo que dibuja el conjunto de casillas
+     * @param x Posicion x inicial
+     * @param y Posicion y inicial
+     * @param g2d Graphics2D del JPanel 
+     */
     @Override
     public void dibujar(int x, int y, Graphics2D g2d) {
         //Configuracion
@@ -50,18 +70,25 @@ public class TableroDibujo implements IFigura {
         int ancho=20,alto=20;
         
          //AstillaIzquierda
-        dibujarAstillaIzquierda(x - (ancho), y, ancho, alto, tam, g2d);
+        dibujarAspaIzquierda(x - (ancho), y, ancho, alto, tam, g2d);
         //AstillaAbajo
-        dibujarAstillaAbajo(x, y + ancho + (alto + 1), ancho, alto, tam, g2d);  
+        dibujarAspaAbajo(x, y + ancho + (alto + 1), ancho, alto, tam, g2d);  
         //AstillaDerecha
-        dibujarAstillaDerecha(x + (ancho * 2), y, ancho, alto, tam, g2d);
+        dibujarAspaDerecha(x + (ancho * 2), y, ancho, alto, tam, g2d);
         //AstillaArriba
-        dibujarAstillaArriba(x, y - ancho, ancho, alto, tam, g2d);
+        dibujarAspaArriba(x, y - ancho, ancho, alto, tam, g2d);
         //CasillaCentral (Solo dibuja)
         dibujarCentrales(x, y, ancho, alto, g2d);
     }
-
-    private void dibujarAstillaArriba(int x, int y, int ancho, int alto, int tam, Graphics2D g2d) {
+    /**
+     * dibuja el aspa hacia arriba
+     * @param x Posicion x de la casilla
+     * @param y Posicion y de la casilla
+     * @param ancho Ancho de la casilla
+     * @param alto Alto de la casilla
+     * @param g2d Graphics2D del JPanel
+     */
+    private void dibujarAspaArriba(int x, int y, int ancho, int alto, int tam, Graphics2D g2d) {
         int cant = tam + 1;
         int i = (cant * 6) - 2; //46
 
@@ -109,8 +136,15 @@ public class TableroDibujo implements IFigura {
             i++;
         }
     }
-
-    private void dibujarAstillaAbajo(int x, int y, int ancho, int alto, int tam, Graphics2D g2d) {
+    /**
+     * dibuja el aspa hacia abajo
+     * @param x Posicion x de la casilla
+     * @param y Posicion y de la casilla
+     * @param ancho Ancho de la casilla
+     * @param alto Alto de la casilla
+     * @param g2d Graphics2D del JPanel
+     */
+    private void dibujarAspaAbajo(int x, int y, int ancho, int alto, int tam, Graphics2D g2d) {
 
         int cant = tam + 1;
         int i = cant * 2; //16
@@ -163,8 +197,15 @@ public class TableroDibujo implements IFigura {
             i++;
         }
     }
-
-    private void dibujarAstillaIzquierda(int x, int y, int ancho, int alto, int tam, Graphics2D g2d) {
+    /**
+     * dibuja el aspa hacia la izquierda
+     * @param x Posicion x de la casilla
+     * @param y Posicion y de la casilla
+     * @param ancho Ancho de la casilla
+     * @param alto Alto de la casilla
+     * @param g2d Graphics2D del JPanel
+     */
+    private void dibujarAspaIzquierda(int x, int y, int ancho, int alto, int tam, Graphics2D g2d) {
         int cant = tam + 1;
         int iCant = cant;
 
@@ -227,8 +268,15 @@ public class TableroDibujo implements IFigura {
             i++;
         }
     }
-
-    private void dibujarAstillaDerecha(int x, int y, int ancho, int alto, int tam, Graphics2D g2d) {
+    /**
+     * dibuja el aspa hacia la derecha
+     * @param x Posicion x de la casilla
+     * @param y Posicion y de la casilla
+     * @param ancho Ancho de la casilla
+     * @param alto Alto de la casilla
+     * @param g2d Graphics2D del JPanel
+     */
+    private void dibujarAspaDerecha(int x, int y, int ancho, int alto, int tam, Graphics2D g2d) {
 
         y += alto;
 
@@ -279,7 +327,14 @@ public class TableroDibujo implements IFigura {
             i++;
         }
     }
-
+    /**
+     * dibuja las casillas centrales
+     * @param x Posicion x de la casilla
+     * @param y Posicion y de la casilla
+     * @param ancho Ancho de la casilla
+     * @param alto Alto de la casilla
+     * @param g2d Graphics2D del JPanel
+     */
     private void dibujarCentrales(int x, int y, int ancho, int alto, Graphics2D g2d) {
         CasillaDibujo casillaCentral;
         for (int i = 0; i < 2; i++) {
