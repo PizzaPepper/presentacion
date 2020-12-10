@@ -8,9 +8,15 @@ package Figura;
 import java.awt.Graphics2D;
 
 /**
- *
- * @author Jorge Eliu
+ *Interfaz que define el dibujo
+ * @author Equipo 5
  */
 public interface IFigura {
+    /**
+     * Metodo abstracto que define la forma de dibujar 
+     * @param x
+     * @param y
+     * @param g2d 
+     */
     public void dibujar(int x,int y, Graphics2D g2d);
 }
