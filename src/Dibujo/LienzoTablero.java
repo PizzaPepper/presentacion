@@ -17,8 +17,8 @@ import java.awt.RenderingHints;
 import javax.swing.JPanel;
 
 /**
- *
- * @author Jorge Eliu
+ *Clase que se encarga de dibujar el tablero
+ * @author Equipo 5
  */
 public class LienzoTablero extends JPanel implements IFigura{
     private Color colorDefault;
@@ -26,13 +26,19 @@ public class LienzoTablero extends JPanel implements IFigura{
     private TableroDibujo tableroD;
     public static Tablero tablero;
     
-    
+    /**
+     * Constructor que inicializar el tablero
+     * @param tablero Objeto Tablero que permite definir el tamaño del tablero
+     */
     public LienzoTablero(Tablero tablero) {
         this.tablero = tablero;
         this.colorDefault = Color.BLACK;
         this.tableroD=new TableroDibujo(tablero);
     }
-
+    /**
+     * Metodo que dibuja el Jpanel
+     * @param g Objeto Grapgics para dibujar el Jpanel
+     */
     @Override
     protected void paintComponent(Graphics g) {
         super.paintComponent(g); //To change body of generated methods, choose Tools | Templates.
@@ -59,7 +65,12 @@ public class LienzoTablero extends JPanel implements IFigura{
         dibujar(x, y, g2d);
         
     }
-    
+    /**
+     * Metodo que dibuja el tablero
+     * @param x Posicion x inicial
+     * @param y Posicion y inicial
+     * @param g2d Objeto Graphics2D donde se va dibujar
+     */
     @Override
     public void dibujar(int x, int y, Graphics2D g2d) {
         tableroD.dibujar(x, y, g2d);
