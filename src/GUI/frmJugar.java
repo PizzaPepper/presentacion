@@ -9,9 +9,7 @@ public class frmJugar extends javax.swing.JFrame {
     /* Se crea el frame y se ubica en el centro de la pantalla */
     public frmJugar() {
         initComponents();
-        this.setLocationRelativeTo(this);
-        
-        
+        this.setLocationRelativeTo(null);
     }
 
     @SuppressWarnings("unchecked")
