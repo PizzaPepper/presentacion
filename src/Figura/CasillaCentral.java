@@ -11,14 +11,27 @@ import java.awt.Rectangle;
 
 /**
  *
- * @author Jorge Eliu
+ * @author Equipo 5
  */
 public class CasillaCentral extends CasillaDibujo {
-
+    /**
+     * Contructor 
+     * @param x Posicion x de la casilla
+     * @param y Posicion y de la casilla
+     * @param ancho Ancho de la casilla
+     * @param alto Alto de la casilla
+     * @param color Color de la casilla
+     * @param g2d Graphics2D del JPanel
+     */
     public CasillaCentral(int x, int y, int ancho, int alto, Color color, Graphics2D g2d) {
         super(x, y, ancho, alto, color, g2d);
     }
-
+    /**
+     * Metodo que dibuja una casilla Central
+     * @param x Posicion x de la casilla
+     * @param y Posicion y de la casilla
+     * @param g2d Graphics2D del JPanel 
+     */
     @Override
     public void dibujar(int x, int y, Graphics2D g2d) {
         g2d.setColor(color);
